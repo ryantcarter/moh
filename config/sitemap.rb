@@ -1,5 +1,5 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "http://www.mountainsofhokkaido.com"
+SitemapGenerator::Sitemap.default_host = "https://www.mountainsofhokkaido.com"
 
 SitemapGenerator::Sitemap.compress = false
 
@@ -10,7 +10,7 @@ SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(fog_provider
                                          fog_region: ENV['S3_REGION'])
 
 SitemapGenerator::Sitemap.sitemaps_host = "http://#{ENV['S3_BUCKET']}.s3.amazonaws.com/"
-SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
+SitemapGenerator::Sitemap.sitemaps_path = 'moh-sitemap/'
 
 SitemapGenerator::Sitemap.create do
   # Put links creation logic here.
