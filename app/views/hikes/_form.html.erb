@@ -1,0 +1,68 @@
+<%= form_for @hike do |f| %>
+<div class="form-group title">
+  <%= f.text_field :title, required: true %>
+  <%= f.label :title %>
+</div>
+
+<div class="hike-details">
+  <div class="form-group">
+    <%= f.text_field :time, required: true %>
+    <%= f.label :time, 'Time (hh:mm)' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :distance, required: true %>
+    <%= f.label :distance %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :climb, required: true %>
+    <%= f.label :climb %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :descent, required: true %>
+    <%= f.label :descent %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :difficulty, required: true %>
+    <%= f.label :difficulty %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :danger, required: true %>
+    <%= f.label :danger %>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="thumb">
+    <% if @hike.image.url %>
+      <%= image_tag @hike.image.url %>
+    <% end %>
+  </div>
+  <%= f.file_field :image %>
+  <%= f.label :image, "Upload a map of the hike..." %>
+</div>
+
+<div class="form-group select">
+  <%= f.select :region, %w{North East Daisetsuzan South West}, { include_blank: true }, required: true %>
+  <%= f.label :region, "Choose a region..." %>
+</div>
+
+<div class="form-group">
+  <%= f.text_area :description, required: true %>
+  <%= f.label :description %>
+</div>
+
+<div class="form-group">
+  <%= f.text_field :topo_maps, required: true %>
+  <%= f.label :topo_maps %>
+</div>
+
+<%= f.submit "Publish" %>
+
+<%= javascript_include_tag "form_validation.js" %>
+
+<% end %>

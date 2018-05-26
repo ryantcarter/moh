@@ -1,0 +1,13 @@
+<header>
+	<% unless current_page?(root_path) %>
+  <nav>
+    <ul>
+      <li class="<%= "light" if current_page?(action: 'new') %>"><%= link_to "Home", root_url %></li>
+      <% if current_page?(action: 'new') %>
+	      <li class="<%= "light" if current_page?(action: 'new') %>"><%= link_to "New Hike", new_hike_path %></li>
+	      <li class="<%= "light" if current_page?(action: 'new') %>"><%= link_to "Login", "#" %></li>
+  		<% end %>
+    </ul>
+  </nav>
+  <% end %>
+</header>

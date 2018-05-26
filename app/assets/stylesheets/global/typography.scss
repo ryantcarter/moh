@@ -1,0 +1,124 @@
+@import 'variables';
+
+html {
+  font-family: $systemSans;
+  font-size: 100%;
+  letter-spacing: -0.4px;
+}
+
+input, textarea, select {
+  font-family: $systemSans;
+  letter-spacing: -0.4px;
+}
+
+p, ul {
+  margin: 0;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+h4, h5, h6 {
+  margin-bottom: 0;
+  color: #aaa;
+  font-weight: 400;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.04rem;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+header nav ul li.light a {
+  color: black;
+
+  &:hover {
+    color: cyan;
+  }
+}
+
+.page-header {
+  color: white;
+}
+
+.page-title span > a {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  text-decoration: none;
+}
+
+.page-title span > a:hover {
+  text-decoration: underline;
+}
+
+.page-title.show-title h1 + span > a {
+  color: white;
+}
+
+.page-title.edit-title h3 + span > a {
+  color: black;
+}
+
+.eyebrow {
+  line-height: 1;
+  font-size: 0.7rem;
+}
+
+.detail {
+  line-height: 1;
+}
+
+.region h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #darkGreen;
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
+}
+
+.region h2.North {
+  color: $northBlue;
+}
+
+.region h2.East {
+  color: $eastGreen;
+}
+
+.region h2.Daisetsuzan {
+  color: $daisetsuzanRed;
+}
+
+.region h2.South {
+  color: $southGreen;
+}
+
+.region h2.West {
+  color: $westYellow;
+}
+
+.hike h3 > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.excerpt {
+  font-size: 0.8rem;
+}

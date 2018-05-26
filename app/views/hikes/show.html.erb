@@ -1,0 +1,47 @@
+<div class="page-header <%= @hike.region %>">
+  <div class="inner">
+    <div class="page-title show-title">
+      <h1><%= @hike.title %></h1>
+      <span><%= link_to "Edit hike", edit_hike_path(@hike) %></span>
+    </div>
+    <div class="details-sidebar">
+      <div class="details">
+        <p class="eyebrow">Time</p>
+        <p class="detail"><%= @hike.time %></p>
+      </div>
+      <div class="details">
+        <p class="eyebrow">Distance</p>
+        <p class="detail"><%= @hike.distance %></p>
+      </div>
+      <div class="details">
+        <p class="eyebrow">Ascent / Descent</p>
+        <p class="detail">+<%= @hike.climb %>
+          / -<%= @hike.descent %></p>
+      </div>
+      <div class="details">
+        <p class="eyebrow">Difficulty</p>
+        <p class="detail"><%= @hike.difficulty %></p>
+      </div>
+      <div class="details">
+        <p class="eyebrow">Danger</p>
+        <p class="detail"><%= @hike.danger %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="map">
+  <% if @hike.image.url %>
+    <%= image_tag @hike.image.url %>
+  <% end %>
+</div>
+
+<div class="inner">
+
+  <!-- Will have hike map here -->
+
+  <section class="description">
+    <h2>The Hike</h2>
+    <%= markdown(@hike.description) %>
+  </section>
+</div>

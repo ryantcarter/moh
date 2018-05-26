@@ -1,0 +1,149 @@
+@import 'variables';
+
+body {
+  margin: 0;
+}
+
+header {
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+  nav {
+    max-width: 660px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      list-style: none;
+      li {
+        display: inline-block;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+header nav.home {
+  max-width: 960px;
+}
+
+.page {
+  margin-bottom: 100px;
+}
+
+.page-header {
+  background: linear-gradient(to bottom right, $darkGreen, $lightGreen);
+  width: 100%;
+  padding: 40px 0;
+}
+
+.region {
+  margin-top: 60px;
+}
+
+.page-header.North {
+  background: $northBlue;
+}
+
+.page-header.East {
+  background: $eastGreen;
+}
+
+.page-header.Daisetsuzan {
+  background: $daisetsuzanRed;
+}
+
+.page-header.South {
+  background: $southGreen;
+}
+
+.page-header.West {
+  background: $westYellow;
+}
+
+.map {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+
+.inner {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 660px;
+  padding: 0 20px;
+  padding-top: 40px;
+}
+
+.inner.home {
+  max-width: 960px;
+}
+
+.page-title {
+  display: flex;
+  align-items: flex-end;
+}
+
+.page-title.show-title {
+  margin-bottom: 40px;
+}
+
+.page-title.show-title h1 + span {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.page-title.edit-title h3 + span {
+  margin-bottom: 12px;
+  margin-left: 20px;
+}
+
+.details-sidebar {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  .details {
+    .eyebrow {
+      margin: 0;
+      margin-bottom: 5px;
+      color: #fff;
+      opacity: 0.65;
+    }
+    .detail {
+      margin: 0;
+    }
+  }
+}
+
+.home .details-sidebar .details .eyebrow {
+  color: #000;
+}
+
+.description, .one-point-advice, .season {
+  margin-bottom: 60px;
+}
+
+.footer {
+  width: 100%;
+  .mountains {
+    width: 100%;
+    img {
+      vertical-align: middle;
+      width: 100%;
+    }
+  }
+  .footer__inner {
+    height:200px;
+    background: #f3f3f3;
+  }
+}

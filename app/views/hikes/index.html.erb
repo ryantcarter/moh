@@ -1,0 +1,35 @@
+<div class="page-header">
+  <div class="home inner">
+    <h1 class="page-title">Mountains of Hokkaido</h1>
+  </div>
+</div>
+
+<div class="inner home">
+  <h2>All the best hikes</h2>
+  <p>Well, not all of them. I've got a huge backlog of hikes to put up on the site but summer is getting on and I know you're keen to hit the hills. Keep an eye on the site as I'll be adding more and more pretty regularly.</p>
+  <% @regions.each do |region, hikes| %>
+    <% if hikes.any? %>
+      <div class="region">
+        <h2 class="<%= region %>"><%= region %></h2>
+        <div class="hikes">
+          <% hikes.each do |hike| %>
+            <div class="hike">
+              <h3><%= link_to hike.title, hike_path(hike) %></h3>
+              <div class="details-sidebar">
+                <div class="details">
+                  <p class="eyebrow">Time</p>
+                  <p class="detail"><%= hike.time %></p>
+                </div>
+                <div class="details">
+                  <p class="eyebrow">Distance</p>
+                  <p class="detail"><%= hike.distance %></p>
+                </div>
+              </div>
+              <div class="excerpt"><%= markdown(hike.description.split[0...20].join(' ') + "...") %></div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

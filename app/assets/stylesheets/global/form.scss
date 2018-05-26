@@ -1,0 +1,147 @@
+@import 'variables';
+
+.form-group {
+  position: relative;
+  margin-bottom: 40px;
+  * {
+    transition: all 0.2s linear;
+  }
+  input, textarea, select {
+    outline: none;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    background: transparent;
+  }
+  input:focus,
+  textarea:focus {
+    border: 1px solid forestgreen;
+  }
+  label {
+    position: absolute;
+    left: 10px;
+    top: 14px;
+    color: #aaa;
+    font-size: 0.7rem;
+    z-index: -1;
+  }
+
+  input[type="text"],
+  select {
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+    height: 450px;
+    padding: 10px;
+    font-size: 0.9rem;
+    font-family: $systemMono;
+    line-height: 1.6;
+  }
+
+  textarea + label {
+    font-size: 0.9rem;
+  }
+
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    & + label {
+      font-size: 0.9rem;
+    }
+  }
+
+  input[type="text"]:focus,
+  input[type="text"]:valid,
+  select:valid,
+  textarea:focus,
+  textarea:valid {
+    padding-top: 23px;
+  }
+
+  input[type="text"]:focus + label,
+  input[type="text"]:valid + label,
+  select:valid + label,
+  textarea:focus + label,
+  textarea:valid + label  {
+    font-size: 0.5rem;
+    top: 10px;
+    left: 10px;
+    color: #aaa;
+    background: white;
+  }
+}
+
+.thumb img {
+  width: 100%;
+}
+
+input[type="file"] {
+  border: none;
+  margin-top: 10px;
+  & + label {
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+  }
+}
+
+.title {
+  margin-bottom: 10px;
+  input[type="text"],
+  label {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  input[type="text"]:focus,
+  input[type="text"]:valid {
+    padding-top: 30px;
+  }
+
+  input[type="text"]:focus + label,
+  input[type="text"]:valid + label {
+    font-size: 0.8rem;
+    top: 13px;
+    left: 13px;
+  }
+}
+
+.hike-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  height: 55px;
+  .form-group {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 0;
+  }
+  .form-group:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.select {
+  position:relative;
+  width: 300px;
+  &:after {
+    content: '';
+    position: absolute;
+    border-top: 5px solid #aaa;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 0;
+    right: 10px;
+    top: 45%;
+  }
+}
+
+.form-group input.input-error {
+  border-color: crimson;
+}

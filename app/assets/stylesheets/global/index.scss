@@ -1,0 +1,26 @@
+.hikes > .hike {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  h3 {
+    flex: 100%;
+  }
+  .details-sidebar {
+    margin-bottom: 10px;
+    justify-content: start;
+    flex: 1;
+    & > .details:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.hikes > .hike:last-child {
+  border: 0;
+}
+
+.excerpt {
+  flex: 2;
+}

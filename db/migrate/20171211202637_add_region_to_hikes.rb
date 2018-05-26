@@ -1,0 +1,5 @@
+class AddRegionToHikes < ActiveRecord::Migration[5.0]
+  def change
+    add_column :hikes, :region, :string
+  end
+end
