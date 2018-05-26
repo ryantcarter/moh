@@ -26,6 +26,7 @@ class HikesController < ApplicationController
 
   def create
     @hike = Hike.new(hike_params)
+    @hike.slug = @hike.title.parameterize
     if @hike.save
       flash[:success] = "Your hike was created"
       redirect_to hike_path(@hike)
