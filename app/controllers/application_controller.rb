@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   before_filter :redirect_www
 
   def redirect_www
-		redirect_to protocol: "https://" unless (request.ssl? || request.local?)
+  	if !request.ssl? || request.host == 'mountainsofhokkaido.com'
+			redirect_to "https://www.mountainsofhokkaido.com"
+		end
   end
 end
