@@ -39,6 +39,6 @@ SitemapGenerator::Sitemap.create do
   add hikes_path
 
   Hike.find_each do |hike|
-    add '/hikes/' + hike.slug, lastmod: post.updated_at
+    add '/hikes/' + hike.slug, lastmod: hike.updated_at
   end
 end
