@@ -1,13 +1,12 @@
 <header>
-	<% unless current_page?(root_path) || current_page?(hikes_path) %>
-  <nav>
+  <nav <%= 'class=home' if current_page?(root_path) || current_page?(hikes_path) %>>
     <ul>
-      <li class="<%= "light" if current_page?(action: 'new') %>"><%= link_to "Home", root_url %></li>
-      <% if current_page?(action: 'new') %>
+      <li class="<%= "light" if current_page?(controller: 'hikes', 	action: 'new') %>"><%= link_to "Home", root_url %></li>
+      <li class="<%= "light" if current_page?(controller: 'hikes', 	action: 'new') %>"><%= link_to "Contact", contact_path %></li>
+      <% if false %>
 	      <li class="<%= "light" if current_page?(action: 'new') %>"><%= link_to "New Hike", new_hike_path %></li>
 	      <li class="<%= "light" if current_page?(action: 'new') %>"><%= link_to "Login", "#" %></li>
   		<% end %>
     </ul>
   </nav>
-  <% end %>
 </header>

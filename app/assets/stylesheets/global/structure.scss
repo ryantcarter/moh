@@ -46,6 +46,10 @@ header nav.home {
   padding: 40px 0;
 }
 
+.page-header.contact {
+  background: black;
+}
+
 .region {
   margin-top: 60px;
 }
@@ -87,6 +91,10 @@ header nav.home {
 
 .inner.home {
   max-width: 960px;
+}
+
+.inner.contact {
+  min-height: 200px;
 }
 
 .page-title {
