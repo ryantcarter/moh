@@ -9,6 +9,7 @@ class Hike < ApplicationRecord
   validates :difficulty, presence: true
   validates :danger, presence: true
   validates :region, presence: true
+  validates :short_description, length: { maximum: 280 }
 
   validates :slug, uniqueness: true, presence: true
 

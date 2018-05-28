@@ -41,6 +41,10 @@
     line-height: 1.6;
   }
 
+  &.short-desc textarea {
+    height: 80px;
+  }
+
   textarea + label {
     font-size: 0.9rem;
   }

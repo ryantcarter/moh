@@ -42,7 +42,7 @@ class HikesController < ApplicationController
 
   def update
     @hike = Hike.find(params[:slug])
-    @hike.slug = params[:post][:slug].parameterize
+    @hike.slug = @hike.title.parameterize
     if @hike.update_attributes(hike_params)
       flash[:success] = "Your hike was successfully updated"
       redirect_to hike_path(@hike)
@@ -55,6 +55,6 @@ class HikesController < ApplicationController
   private
 
     def hike_params
-      params.require(:hike).permit(:title, :slug, :image, :time, :distance, :climb, :descent, :difficulty, :danger, :region, :description, :topo_maps)
+      params.require(:hike).permit(:title, :slug, :short_description, :image, :time, :distance, :climb, :descent, :difficulty, :danger, :region, :description, :topo_maps)
     end
 end
