@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Mountains of Hokkaido</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The best hikes in Hokkaido, including the mountains that only the locals seem to know about.">
-    <%= csrf_meta_tags %>
+	<head>
+		<title>Mountains of Hokkaido</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="The best hikes in Hokkaido, including the mountains that only the locals seem to know about.">
+		<%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application' %>
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
-  </head>
+		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'application' %>
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
 
-  <body>
-    <%= render 'layouts/header' %>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-91023638-3"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-91023638-3');
+		</script>
 
-    <div class="page">
-      <%= yield %>
-    </div>
+	</head>
 
-    <%= render 'layouts/footer' %>
-    <%= render 'layouts/javascripts' %>
-  </body>
+	<body>
+		<%= render 'layouts/header' %>
+
+		<div class="page">
+			<%= yield %>
+		</div>
+
+		<%= render 'layouts/footer' %>
+		<%= render 'layouts/javascripts' %>
+	</body>
 </html>
