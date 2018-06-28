@@ -4,6 +4,9 @@ class HikesController < ApplicationController
 
   def index
     @hikes = Hike.all.order('title')
+
+    @recents = Hike.order('created_at DESC').limit(3)
+
     @north, @east, @daisetsuzan, @south, @west = [], [], [], [], []
     @hikes.select do |hike|
       @north << hike if hike.region == 'North'
