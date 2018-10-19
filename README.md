@@ -1,4 +1,4 @@
-# Mountains of Hokkaido
+# Mountains of Hokkaido :mount_fuji:
 
 **All the best hikes.**
 
